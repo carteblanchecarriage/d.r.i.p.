@@ -1,0 +1,127 @@
+body {
+    position: relative;
+    background-color: #002fff;
+    color: white;
+    font-family: 'verdana', serif;
+    margin: 0;
+    padding-bottom: 3em;
+    border: 0px solid;
+}
+
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    display: inline;
+    font-family: 'alkalami', serif;
+    /*alkalami*/
+}
+
+#calcSection {
+    background-color: rgb(0, 0, 10);
+    padding: 10px;
+    margin: 10%;
+    border-radius: 20px;
+}
+
+#projectTitle {
+    margin: 5%;
+    text-align: center;
+    padding: 0px;
+}
+
+#projectTitle:hover {
+    cursor: crosshair;
+
+}
+
+div,
+section {
+    text-align: center;
+    padding: 0px;
+    margin: 5%;
+}
+
+hr {
+    margin: auto;
+    width: 80%;
+}
+
+p {
+    text-align: center;
+    margin: 0px;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 2em;
+    bottom: 0;
+    padding: 10px;
+    background-color: black;
+}
+
+#tagline {
+    font-size: 10px;
+}
+
+#fields {}
+
+button {
+    background-color: white;
+    border: 0px;
+    box-shadow: 3px 3px black;
+}
+
+button:focus {
+    background-color: yellow;
+}
+
+a {
+    color: white;
+}
+
+#imperial {
+    background-color: yellow;
+}
+
+#link {
+    border: 1 px solid white;
+}
+
+#coffee {
+    font-size: 12px;
+
+}
+
+#axo {
+    background-color: transparent;
+    background: transparent;
+}
+
+/* BELOW IS FOR THE REFERENCES PAGE  */
+
+.referenceProject {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+    background-color: ;
+}
+
+.cropped {
+    object-fit: cover;
+    margin: 0px;
+    display: block;
+    border-radius: 50%;
+}
+
+.projectName {
+    background-color: black;
+    margin: 0px;
+    padding: 5px;
+}
+
+/* ABOVE IS FOR THE REFERENCES PAGE  */

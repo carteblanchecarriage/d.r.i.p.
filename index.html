@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>d.r.i.p</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="gutterbrain_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <audio hidden controls autoplay>
+        <!-- <source src="rain.mp3"> -->
+    </audio>
+</head>
+
+<body>
+    <header id="projectTitle">
+        <h1><u>d . r . i . p .</u></h1><br>
+        <a href="howtouse.html" title="this is how to use this program">how to use + references</a><br>
+    </header>
+
+    <hr>
+
+    <section class="inputSections">
+        <button id="imperial">Imperial</button>
+        <button>Metric (coming soon)</button>
+    </section>
+
+    <div id="calcSection">
+
+
+        <section id="fields">
+            <img id="axo" src="roof_sketch.png" width="50%">
+            <form>
+                <label for="parameter">Width (ft)</label>
+                <input type="width">
+            </form>
+            <br>
+            <form>
+                <label for="parameter">Length (ft)</label>
+                <input type="width">
+            </form>
+        </section>
+
+        <section id="fields">
+            <form>
+                <label for="parameter">rainfall intensity (in/hr)</label>
+                <input type="rainfall">
+            </form>
+        </section>
+
+        <section id="fields">
+            <form>
+                <label for="parameter">gutter length (ft)</label>
+                <input type="width">
+            </form>
+
+            <div>
+                <button>OG</button>
+                <button>Half-Round</button>
+                <button>Sqaure</button>
+            </div>
+        </section>
+
+    </div>
+
+    <section>
+        <div>
+            <button>submit</button>
+        </div>
+    </section>
+
+    <section>
+        ----- output ends up here ------
+        <br>
+        <br>
+        <button>download report</button>
+    </section>
+
+    <!--
+        <div id="link">
+            <a id="coffee" href="https://www.buymeacoffee.com/">buy the developer a coffee</a>
+        </div>
+    -->
+
+
+    <footer>
+        <span class="rain_cloud">&#127783</span>
+        <i>it's currently raining in.......<u>Singapore</u></i>
+        <!-- pull weather info from an API, rotate through cities
+        that are experincing rain currently, clicking on the city
+        takes you to a weather page for that city  -->
+        <span class="rain_cloud">&#127783</span>
+    </footer>
+
+</body>
+
+</html>
