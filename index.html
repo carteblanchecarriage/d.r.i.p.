@@ -11,6 +11,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+    <script src="gutter_program.js"></script>
+
     <audio hidden controls autoplay>
         <!-- <source src="rain.mp3"> -->
     </audio>
@@ -24,60 +26,52 @@
 
     <hr>
 
-    <section class="inputSections">
+    <section>
         <button id="imperial">Imperial</button>
         <button>Metric (coming soon)</button>
     </section>
 
     <div id="calcSection">
+        <img id="axo" src="roof_sketch.png" width="50%">
 
 
-        <section id="fields">
-            <img id="axo" src="roof_sketch.png" width="50%">
-            <form>
-                <label for="parameter">Width (ft)</label>
-                <input type="width">
-            </form>
-            <br>
-            <form>
-                <label for="parameter">Length (ft)</label>
-                <input type="width">
+        <section>
+            <form id="inputFields">
+                <div class="field">
+                    <label for="parameter">Width (ft)</label>
+                    <input type="number" placeholder="30" required>
+                </div>
+                <div class="field">
+                    <label for="length">Length (ft) <input id="length" type="number" placeholder="50" required></label>
+                </div>
+                <div class="field">
+                    <label for="parameter">Rainfall Intensity (in/hr) <input type="number" placeholder="0.85"
+                            required></label>
+                </div>
+                <div class="field">
+                    <label for="parameter">Gutter Length (ft) <input type="number" placeholder="50" required></label>
+                </div>
+                <div id="radioButtons">
+                    <input type="radio">OG</button>
+                    <input type="radio">Half-Round</button>
+                    <input type="radio">Sqaure</button>
+                </div>
+                <div id="submitField">
+                    <input type="submit"></input>
+                </div>
             </form>
         </section>
 
-        <section id="fields">
-            <form>
-                <label for="parameter">rainfall intensity (in/hr)</label>
-                <input type="rainfall">
-            </form>
-        </section>
 
-        <section id="fields">
-            <form>
-                <label for="parameter">gutter length (ft)</label>
-                <input type="width">
-            </form>
-
-            <div>
-                <button>OG</button>
-                <button>Half-Round</button>
-                <button>Sqaure</button>
-            </div>
-        </section>
 
     </div>
 
-    <section>
-        <div>
-            <button>submit</button>
-        </div>
-    </section>
 
     <section>
         ----- output ends up here ------
         <br>
         <br>
-        <button>download report</button>
+        <button id="submit-button" type="button">download report (coming soon)</button>
     </section>
 
     <!--
