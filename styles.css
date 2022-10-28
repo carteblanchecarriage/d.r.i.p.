@@ -1,0 +1,248 @@
+html,
+body {
+    margin: 0px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    background-image: linear-gradient(0deg, #002fff, rgb(114, 118, 233));
+    color: white;
+    font-family: 'verdana', serif;
+    min-height: 100vh;
+    padding-bottom: 3em;
+    border: 0px solid;
+}
+
+body.active {
+    background-color: yellow;
+}
+
+header {
+    text-align: center;
+    color: black;
+}
+
+.nav-logo {
+    color: black;
+    font-family: 'alkalami', serif;
+    font-size: 30px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+}
+
+
+
+/*
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+*/
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+}
+
+.bar.active {
+    background-color: yellow;
+}
+
+.nav-menu {
+    display: flex;
+    position: fixed;
+    left: 100%;
+    flex-direction: column;
+    width: 100%;
+}
+
+nav.menu.active {
+    left: 0%;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+section {
+    text-align: center;
+}
+
+.field {
+    margin: 5px 0px;
+    text-align: right;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    display: inline;
+    font-family: 'alkalami', serif;
+    margin: 0;
+    /*alkalami*/
+}
+
+#calcSection,
+#outputSection {
+    background-color: black;
+    padding: 20px;
+    margin: 20px 15%;
+    //border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+#radioButtons,
+#submitField {
+    align-self: center;
+    margin: 10px 0 0 0;
+}
+
+
+#projectTitle {
+    margin: 1em 0;
+    text-align: center;
+    padding: 0px;
+}
+
+div,
+section {
+    text-align: center;
+    padding: 0px;
+    margin: 0%;
+}
+
+li {
+    list-style: none;
+}
+
+#output1 {
+    background-color: black;
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    margin: 0px;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    height: 2em;
+    bottom: 0;
+    padding: 10px;
+    background-color: black;
+    color: #002fff;
+}
+
+
+
+i {
+    vertical-align: middle;
+}
+
+#tagline {
+    font-size: 10px;
+}
+
+
+button {
+    background-color: white;
+    border: 0px;
+    box-shadow: 3px 3px black;
+}
+
+button:active {
+    background-color: yellow;
+}
+
+a {
+    color: #002fff;
+    text-decoration: none;
+}
+
+#imperial {
+    background-color: yellow;
+}
+
+#link {
+    border: 1 px solid white;
+}
+
+#coffee {
+    font-size: 12px;
+
+}
+
+#axo {
+    background-color: transparent;
+    background: transparent;
+    width: 200px;
+}
+
+::placeholder {
+    color: #22222255;
+}
+
+#outputDiv {
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+}
+
+
+/* BELOW IS FOR THE REFERENCES PAGE  */
+
+.referenceProject {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px;
+    margin: 0px;
+}
+
+.cropped {
+    object-fit: cover;
+    margin: 0px;
+    display: block;
+    border-radius: 50%;
+}
+
+.projectName {
+    background-color: black;
+    margin: 0px;
+    padding: 5px;
+}
+
+/* ABOVE IS FOR THE REFERENCES PAGE  */
