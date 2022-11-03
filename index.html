@@ -23,15 +23,18 @@
     <header id="projectTitle">
         <nav class="navbar">
             <a href="index.html" class="nav-logo"><b>d . r . i . p .</b></a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" class="active" id="nav-menu">
                 <li class="nav-item">
-                    <a href="howtouse.html" class="nav-link">How to Use</a>
+                    <a href="" class="nav-link">reference projects</a>
                 </li>
                 <li class="nav-item">
-                    <a href="references.html" class="nav-link">Reference Projects</a>
+                    <a href="" class="nav-link">rain</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">about</a>
                 </li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" class="active" id="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -59,7 +62,7 @@
                 </div>
                 <div class="field">
                     <label for="rainfall">Rainfall Intensity (in/hr) <input id="rainfall" type="number" name="rainfall"
-                            placeholder="0.85" required></label>
+                            placeholder="0.85" min="0.1" max="15" step="0.01" required></label>
                 </div>
                 <div class="field">
                     <label for="gutterLength">Gutter Length (ft) <input id="gutterLength" type="number"
@@ -70,18 +73,19 @@
                     <input type="radio">Half-Round</input>
                     <input type="radio">Sqaure</input>
                 </div>
+                <div>
+                    <label for="ratio"><input id="ratioM" type="range" min=".25" max="1" step=".25">gutter ratio</label>
+                </div>
                 <div id="submitField">
                     <input type="submit" id="submitBtn" value="Calculate this sh*t">
                 </div>
             </div>
         </form>
-
-
     </div>
 
     <section id="outputSection">
-        <p id="outputText"><samp>~ output ends up here ~</samp></p>
-
+        <p id="outputText1"><samp>~ output ends up here ~</samp></p>
+        <p id="outputText2"><samp>~ output ends up here ~</samp></p>
         <br>
         <button id="download" type="button">download report (coming eventually)</button>
     </section>

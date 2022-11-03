@@ -8,22 +8,28 @@ body {
 
 body {
     position: relative;
-    background-image: linear-gradient(0deg, #002fff, rgb(114, 118, 233));
-    color: white;
+    /* background-image: linear-gradient(0deg, #002fff, rgb(114, 118, 233)); */
+    color: black;
     font-family: 'verdana', serif;
     min-height: 100vh;
     padding-bottom: 3em;
-    border: 0px solid;
+    text-align: center;
 }
 
+
 body.active {
-    background-color: yellow;
+    background-color: blue;
 }
 
 header {
-    text-align: center;
     color: black;
 }
+
+a {
+    color: #002fff;
+    text-decoration: none;
+}
+
 
 .nav-logo {
     color: black;
@@ -44,20 +50,20 @@ header {
 }
 
 
-
-/*
 .hamburger.active .bar:nth-child(2) {
     opacity: 0;
 }
 
 .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
+    transition-duration: 1000ms;
 }
 
 .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+    transition-duration: 1000ms;
 }
-*/
+
 
 .bar {
     display: block;
@@ -67,25 +73,40 @@ header {
     background-color: black;
 }
 
-.bar.active {
-    background-color: yellow;
-}
+.bar:active {}
 
 .nav-menu {
     display: flex;
+    visibility: hidden;
     position: fixed;
-    left: 100%;
-    flex-direction: column;
-    width: 100%;
 }
 
-nav.menu.active {
-    left: 0%;
+.nav-menu.active {
+    display: flex;
+    visibility: visible;
+    position: fixed;
+    right: 3em;
+    top: 4.5em;
+    flex-direction: column;
+    z-index: 1;
 }
 
 .nav-item {
-    margin-left: 5rem;
+    border: 1px solid blue;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    padding: .1em .1em;
 }
+
+.nav-item:hover,
+.nav-item:hover a {
+    background-color: #002fff;
+    color: white;
+
+}
+
+.hamburger.active {}
 
 section {
     text-align: center;
@@ -107,13 +128,16 @@ h1 {
 
 #calcSection,
 #outputSection {
-    background-color: black;
+    background-color: rgb(232, 232, 232);
     padding: 20px;
-    margin: 20px 15%;
-    //border-radius: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    max-width: 500px;
+    position: relative;
+    margin: 20px auto;
+    box-shadow: black 5px 5px 5px;
 }
 
 
@@ -176,7 +200,7 @@ i {
 
 
 button {
-    background-color: white;
+    background-color: rgb(141, 141, 141);
     border: 0px;
     box-shadow: 3px 3px black;
 }
@@ -185,10 +209,7 @@ button:active {
     background-color: yellow;
 }
 
-a {
-    color: #002fff;
-    text-decoration: none;
-}
+
 
 #imperial {
     background-color: yellow;
