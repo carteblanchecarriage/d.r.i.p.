@@ -19,20 +19,31 @@
     -->
 </head>
 
-<body id="thebody">
-    <header id="projectTitle">
+<body id="body1">
+    <header>
         <nav class="navbar">
             <a href="index.html" class="nav-logo"><b>d . r . i . p .</b></a>
             <ul class="nav-menu" class="active" id="nav-menu">
-                <li class="nav-item">
-                    <a href="" class="nav-link">reference projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">rain</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">about</a>
-                </li>
+                <a href="index.html" class="nav-link">
+                    <li class="nav-item">
+                        home
+                    </li>
+                </a>
+                <a href="references.html" class="nav-link">
+                    <li class="nav-item">
+                        reference projects
+                    </li>
+                </a>
+                <a href="rain.html" class="nav-link">
+                    <li class="nav-item">
+                        rain
+                    </li>
+                </a>
+                <a href="howtouse.html" class="nav-link">
+                    <li class="nav-item">
+                        about
+                    </li>
+                </a>
             </ul>
             <div class="hamburger" class="active" id="hamburger">
                 <span class="bar"></span>
@@ -50,7 +61,8 @@
 
         <img id="axo" src="roof_sketch.png" alt="diagram depicting length and width" width="50%">
 
-        <form id="form2" target="_blank" method="post">
+        <form id="form1" target="_top" method="post" onsubmit="return false">
+            <!-- CAN'T FIGURE OUT HOW TO MAKE IT STOP OPENING A NEW TAB OR REFRESHING :(  -->
             <div id="inputFields">
                 <div class=" field">
                     <label for="roofWidth">Roof Width (ft)</label>
@@ -62,11 +74,11 @@
                 </div>
                 <div class="field">
                     <label for="rainfall">Rainfall Intensity (in/hr) <input id="rainfall" type="number" name="rainfall"
-                            placeholder="0.85" min="0.1" max="15" step="0.01" required></label>
+                            placeholder="6" min="0.1" max="15" step="0.01" required></label>
                 </div>
                 <div class="field">
                     <label for="gutterLength">Gutter Length (ft) <input id="gutterLength" type="number"
-                            name="gutterLength" placeholder="roofLength" required></label>
+                            name="gutterLength" placeholder="50" required></label>
                 </div>
                 <div id="radioButtons">
                     <input type="radio">OG</input>
@@ -78,6 +90,7 @@
                 </div>
                 <div id="submitField">
                     <input type="submit" id="submitBtn" value="Calculate this sh*t">
+                    <input type="reset" id="clrBtn" value="clear">
                 </div>
             </div>
         </form>
@@ -87,7 +100,7 @@
         <p id="outputText1"><samp>~ output ends up here ~</samp></p>
         <p id="outputText2"><samp>~ output ends up here ~</samp></p>
         <br>
-        <button id="download" type="button">download report (coming eventually)</button>
+        <button id="download" type="button" disabled>download report (coming eventually)</button>
     </section>
 
     <!--
@@ -97,12 +110,11 @@
     -->
 
 
-    <footer>
+    <footer id="footer1">
         <section>
             <span class="rain_cloud">&#127783</span>
-            <i>it's currently raining in.......<a href="https://weather.com/weather/today/l/1efe4495cfdc
-                    821c40c4b6eec5324b7914b66d4b034f62411ccb1d8444f3a57f">
-                    <u>Singapore</u></a></i>
+            <i>it's currently raining in.......<a id="singapore" href="https://weather.com/weather/today/l/1efe4495cfdc
+                    821c40c4b6eec5324b7914b66d4b034f62411ccb1d8444f3a57f"><u>Singapore</u></a></i>
             <!-- pull weather info from an API, rotate through cities
         that are experincing rain currently, clicking on the city
         takes you to a weather page for that city  -->

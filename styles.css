@@ -7,13 +7,47 @@ body {
 }
 
 body {
-    position: relative;
+    position: static;
     /* background-image: linear-gradient(0deg, #002fff, rgb(114, 118, 233)); */
     color: black;
     font-family: 'verdana', serif;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100%;
     padding-bottom: 3em;
     text-align: center;
+}
+
+a {
+    color: #002fff;
+    text-decoration: none;
+}
+
+#footer1 {
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    width: 100vw;
+    height: 2em;
+    bottom: 0;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+#singapore {
+    color: white;
+}
+
+#footer2 {
+    position: fixed;
+    text-align: center;
+    vertical-align: middle;
+    width: 100vw;
+    height: 2em;
+    bottom: 0;
+    padding: 5px;
+    background-color: black;
+    color: #002fff;
 }
 
 
@@ -23,12 +57,13 @@ body.active {
 
 header {
     color: black;
+    margin: 1em auto;
+    text-align: center;
+    padding: 0px;
+    max-width: 1000px;
 }
 
-a {
-    color: #002fff;
-    text-decoration: none;
-}
+
 
 
 .nav-logo {
@@ -38,6 +73,7 @@ a {
 }
 
 .navbar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,15 +120,16 @@ a {
 .nav-menu.active {
     display: flex;
     visibility: visible;
-    position: fixed;
-    right: 3em;
-    top: 4.5em;
+    position: absolute;
+    right: 2em;
+    top: 3em;
     flex-direction: column;
     z-index: 1;
 }
 
-.nav-item {
-    border: 1px solid blue;
+.nav-item,
+.nav-item a {
+    border: 1px solid #002fff;
     width: 100%;
     text-align: center;
     background-color: white;
@@ -148,12 +185,6 @@ h1 {
 }
 
 
-#projectTitle {
-    margin: 1em 0;
-    text-align: center;
-    padding: 0px;
-}
-
 div,
 section {
     text-align: center;
@@ -175,19 +206,6 @@ p {
     text-align: center;
     margin: 0px;
 }
-
-footer {
-    position: absolute;
-    text-align: center;
-    vertical-align: middle;
-    width: 100%;
-    height: 2em;
-    bottom: 0;
-    padding: 10px;
-    background-color: black;
-    color: #002fff;
-}
-
 
 
 i {
@@ -243,12 +261,47 @@ button:active {
 
 /* BELOW IS FOR THE REFERENCES PAGE  */
 
+#body2 {
+    position: relative;
+    background-color: #002fff;
+}
+
 .referenceProject {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 0px;
-    margin: 0px;
+    margin: 5%;
+}
+
+.project-link {
+    position: absolute;
+    background-color: red;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.project {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    animation: fadeIn ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .cropped {
@@ -260,8 +313,15 @@ button:active {
 
 .projectName {
     background-color: black;
+    color: white;
     margin: 0px;
     padding: 5px;
+    width: 100%;
 }
 
 /* ABOVE IS FOR THE REFERENCES PAGE  */
+
+#gregory {
+    max-width: 100%;
+    max-height: 100vh;
+}
