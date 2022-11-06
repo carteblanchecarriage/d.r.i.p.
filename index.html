@@ -56,7 +56,7 @@
     <div id="calcSection">
         <section>
             <button id="imperial">Imperial</button>
-            <button>Metric (coming eventually)</button>
+            <button disabled>Metric (coming eventually)</button>
         </section>
 
         <img id="axo" src="roof_sketch.png" alt="diagram depicting length and width" width="50%">
@@ -85,8 +85,10 @@
                     <input type="radio">Half-Round</input>
                     <input type="radio">Sqaure</input>
                 </div>
-                <div>
-                    <label for="ratio"><input id="ratioM" type="range" min=".25" max="1" step=".25">gutter ratio</label>
+                <div id="ratioSection">
+                    <label for="ratio">Gutter Ratio (Depth/Width)</label>
+                    <p id="gutterRatio"></p>
+                    <input id="ratioM" type="range" value=".5" min=".25" max="1" step=".25">
                 </div>
                 <div id="submitField">
                     <input type="submit" id="submitBtn" value="Calculate this sh*t">
