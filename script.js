@@ -37,6 +37,12 @@ clrBtn.addEventListener('click', function () {
     outputText1.innerHTML = "Gutter Width: ";
     outputText2.innerHTML = "Gutter Depth: ";
 })
+
+document.getElementById("gutterRatio").innerHTML = ratioM.value;
+
+ratioM.onchange = function () {
+    document.getElementById("gutterRatio").innerHTML = ratioM.value;
+}
 /*
 // Gutter Calculator
 // https://www.metalsales.us.com/wp-content/uploads/2020/01/1b-general-information-pm-2018.pdf

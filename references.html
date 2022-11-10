@@ -4,6 +4,8 @@
 <head>
     <title>d.r.i.p</title>
     <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,12 +64,6 @@
 
                 </div>
 
-                <div class="project">
-                    <a class="project-link" href="https://www.crystalinks.com/gargoyles.html" target="_blank"></a>
-                    <img class="cropped" src="reference_images/gargoyle.jpg" alt="image of a house" width="200"
-                        height="200">
-                    <p class="projectName">Gargoyles</p>
-                </div>
 
                 <div class="project">
                     <a class="project-link" href="http://www.6a.co.uk/projects/selected/cowan-court"
@@ -78,24 +74,41 @@
                 </div>
 
                 <div class="project">
-                    <img class="cropped" src="reference_images/mesh-gradient.png" alt="image of a house" width="200"
+                    <a class="project-link" href="http://rwka.com/project/beach-road-house" target="_blank"></a>
+                    <img class="cropped" src="reference_images/Sky_Road.jpg" alt="image of a house" width="200"
                         height="200">
-                    <p class="projectName">suggestion?</p>
+                    <p class="projectName">RWKA: Sky Road</p>
+                </div>
 
-                    <input type="text" id="suggestion">
-                    <input type="submit" id="submitProject">
+                <div class="project">
+                    <a class="project-link" href="https://www.crystalinks.com/gargoyles.html" target="_blank"></a>
+                    <img class="cropped" src="reference_images/gargoyle.jpg" alt="image of a house" width="200"
+                        height="200">
+                    <p class="projectName">Gargoyles</p>
+                </div>
+
+                <div class="project">
+                    <img class="cropped-color" src="reference_images/mesh-gradient.png" alt="image of a house"
+                        width="200" height="200">
+                    <p class="projectName">suggestion?</p>
+                    <div class="input-group">
+                        <input type="text">
+                        <input type="submit" id="suggestion" class="btn btn-warning btn-sm btn-color">
+                    </div>
                 </div>
         </container>
     </div>
 
     <footer id="footer2">
         <div>
-            <span class="rain_cloud">&#127783</span>
-            <i>it's currently raining in.......<u>Singapore</u></i>
-            <!-- pull weather info from an API, rotate through cities
+            <div>
+                <span class="rain_cloud">&#127783</span>
+                <i>it's currently raining in.......<u>Singapore</u></i>
+                <!-- pull weather info from an API, rotate through cities
         that are experincing rain currently, clicking on the city
         takes you to a weather page for that city  -->
-            <span class="rain_cloud">&#127783</span>
+                <span class="rain_cloud">&#127783</span>
+            </div>
         </div>
     </footer>
 

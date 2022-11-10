@@ -27,7 +27,7 @@ a {
     text-align: center;
     vertical-align: middle;
     width: 100vw;
-    height: 2em;
+    height: 3em;
     bottom: 0;
     padding: 5px;
     background-color: black;
@@ -45,7 +45,7 @@ a {
     text-align: center;
     justify-content: center;
     width: 100vw;
-    height: 2em;
+    height: 3em;
     bottom: 0;
     padding: 5px;
     background-color: black;
@@ -69,7 +69,11 @@ header {
 .nav-logo {
     color: black;
     font-family: 'alkalami', serif;
-    font-size: 30px;
+    font-size: 40px;
+}
+
+.nav-logo:hover {
+    color: blue;
 }
 
 .navbar {
@@ -79,6 +83,8 @@ header {
     align-items: center;
     padding: 1rem 3rem;
 }
+
+
 
 .hamburger {
     display: block;
@@ -109,6 +115,10 @@ header {
     background-color: black;
 }
 
+.bar:hover {
+    background-color: blue;
+}
+
 
 .nav-menu {
     display: flex;
@@ -121,7 +131,7 @@ header {
     visibility: visible;
     position: absolute;
     right: 2em;
-    top: 3.5em;
+    top: 4em;
     flex-direction: column;
     z-index: 1;
 }
@@ -133,6 +143,7 @@ header {
     text-align: center;
     background-color: white;
     padding: .1em .1em;
+    color: #002fff
 }
 
 .nav-item:hover,
@@ -180,6 +191,7 @@ h1 {
     position: relative;
     margin: 20px auto;
     box-shadow: black 5px 5px 5px;
+    border-radius: 10px;
 }
 
 
@@ -252,10 +264,18 @@ button:active {
 }
 
 
-
-#imperial {
+.btn {
     background-color: #002fff;
     color: white;
+}
+
+.btn:hover {
+    background-color: yellow;
+}
+
+.btn:focus {
+    background-color: yellow;
+    color: black;
 }
 
 #link {
@@ -271,6 +291,7 @@ button:active {
     background-color: transparent;
     background: transparent;
     width: 200px;
+    filter: invert(100%);
 }
 
 ::placeholder {
@@ -338,6 +359,14 @@ input {
     margin: 0px;
     display: block;
     border-radius: 50%;
+    filter: grayscale(100%);
+}
+
+.cropped-color {
+    object-fit: cover;
+    margin: 0px;
+    display: block;
+    border-radius: 50%;
 }
 
 .projectName {
@@ -350,9 +379,24 @@ input {
 
 #suggestion,
 #submitProject {
-    width: 100%;
+    display: inline;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: black
+}
 
+.btn-color {
+    background-color: white;
+}
+
+.btn-color:hover {
+    background-color: yellow;
 }
 
 
 /* ABOVE IS FOR THE REFERENCES PAGE  */
+
+#gregory {
+    width: 50%;
+}
