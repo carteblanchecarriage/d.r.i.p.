@@ -68,8 +68,9 @@
             <!-- CAN'T FIGURE OUT HOW TO MAKE IT STOP OPENING A NEW TAB OR REFRESHING :(  -->
             <div id="inputFields">
                 <div class=" field">
-                    <label for="roofWidth">Roof Width (ft)</label>
-                    <input type="number" id="roofWidth" name="roofWidth" placeholder="30" required>
+                    <label for="roofWidth">Roof Width (ft) <input type="number" id="roofWidth" name="roofWidth"
+                            placeholder="30" required></label>
+
                 </div>
                 <div class="field">
                     <label for="length">Roof Length (ft) <input id="roofLength" type="number" name="length"
@@ -94,12 +95,12 @@
                     <label for="ratio" class="form-label">Gutter Ratio (Depth/Width)</label>
                     <p id="gutterRatio" class="badge"></p>
                     <div class="container">
-                        <input id="ratioM" class="form-range" type="range" value=".5" min=".5" max="1" step=".25">
+                        <input id="ratioM" class="form-range" type="range" value=".75" min=".5" max="1" step=".25">
                     </div>
                 </div>
-                <div id="submitField">
-                    <input type="submit" class="btn" id="submitBtn" value="Calculate">
-                    <input type="reset" class="btn" id="clrBtn" value="Clear">
+                <div>
+                    <input type="submit" class="btn btnExecute" id="submitBtn" value="Calculate">
+                    <input type="reset" class="btn btnExecute" id="clrBtn" value="Clear">
                 </div>
             </div>
         </form>
@@ -107,7 +108,7 @@
 
     <section id="outputSection">
         <p id="outputText1"><samp>~ output ends up here ~</samp></p>
-        <p id="outputText2"><samp>~ output ends up here ~</samp></p>
+        <p id="outputText2"><samp></samp></p>
         <br>
         <button id="download" class="btn" type="button" disabled>download report (coming eventually)</button>
     </section>
