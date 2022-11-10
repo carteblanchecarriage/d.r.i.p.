@@ -15,6 +15,7 @@ body {
     height: 100%;
     padding-bottom: 5em;
     text-align: center;
+    overflow-x: hidden;
 }
 
 a {
@@ -24,14 +25,15 @@ a {
 
 #footer1 {
     position: fixed;
+    align-items: center;
     text-align: center;
-    vertical-align: middle;
     width: 100vw;
     height: 3em;
     bottom: 0;
     padding: 5px;
     background-color: black;
     color: white;
+    overflow: hidden;
 }
 
 #singapore {
@@ -52,6 +54,19 @@ a {
     color: #002fff;
 }
 
+#scroll-text {
+    animation: bannermove 40s linear infinite;
+}
+
+@keyframes bannermove {
+    from {
+        transform: translateX(75%);
+    }
+
+    to {
+        transform: translateX(-75%);
+    }
+}
 
 body.active {
     background-color: blue;
@@ -142,7 +157,7 @@ header {
     width: 100%;
     text-align: center;
     background-color: white;
-    padding: .1em .1em;
+    padding: .1em 1em;
     color: #002fff
 }
 
@@ -150,7 +165,6 @@ header {
 .nav-item:hover a {
     background-color: #002fff;
     color: white;
-
 }
 
 @media screen and (max-width: 400px) {
@@ -241,6 +255,10 @@ li {
     text-align: center;
 }
 
+#download {
+    margin: 2em 0 0 0;
+}
+
 p {
     text-align: center;
     margin: 0px;
@@ -271,10 +289,13 @@ button:active {
 .btn {
     background-color: #002fff;
     color: white;
+    margin: 0 5px;
 }
 
 .btn:hover {
-    background-color: yellow;
+    background-color: #365bff;
+    color: white;
+    transform: scale(1.1);
 }
 
 .btn:focus {
