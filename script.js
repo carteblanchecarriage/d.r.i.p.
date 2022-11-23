@@ -24,30 +24,51 @@ const drainedArea = roofWidth.value * roofLength.value;
 const ratioM = document.getElementById("ratioM");
 const gutterWidth = 0.016 * (Math.pow(ratioM.value, (-4 / 7))) * Math.pow(gutterLength.value, (3 / 28)) * Math.pow((rainfall.value * (roofWidth.value * roofLength.value)), (5 / 14));
 
+const imperial = document.getElementById("imperial");
+const metric = document.getElementById("metric");
+
 submitBtn.addEventListener('click', function gutterCalc() {
     const gutterWidth = 12 * 0.0106 * Math.pow(ratioM.value, -(4 / 7)) * Math.pow(gutterLength.value, (3 / 28)) * Math.pow((rainfall.value * (roofWidth.value * roofLength.value)), (5 / 14));
-    outputText1.innerHTML = "Gutter Width: " + Math.ceil(gutterWidth) + '"';
-    //12 * 0.0106 * Math.pow(ratioM.value, -(4 / 7)) * Math.pow(gutterLength.value, (3 / 28)) * Math.pow((rainfall.value * (roofWidth.value * roofLength.value)), (5 / 14));
-    //outputText1.innerHTML = "Gutter Width: " + gutterWidth + '"';
-    outputText2.innerHTML = "Gutter Depth: " + Math.ceil(gutterWidth * ratioM.value) + '"';
-    form1.preventDefault();
+    if (imperial.checked) {
+        outputText1.innerHTML = "Gutter Width: " + Math.ceil(gutterWidth) + '"';
+        outputText2.innerHTML = "Gutter Depth: " + Math.ceil(gutterWidth * ratioM.value) + '"';
+        form1.preventDefault();
+    } else if (metric.checked) {
+        outputText1.innerHTML = `Gutter Width: ${Math.ceil(gutterWidth * 2.54)} cm`;
+        outputText2.innerHTML = `Gutter Depth: ${Math.ceil(gutterWidth * ratioM.value * 2.54)} cm`;
+        form1.preventDefault();
+    }
 });
 
 clrBtn.addEventListener('click', function () {
-    outputText1.innerHTML = "Gutter Width: ";
-    outputText2.innerHTML = "Gutter Depth: ";
+    outputText1.innerHTML = 'Gutter Width: X"';
+    outputText2.innerHTML = 'Gutter Depth: X"';
 })
 
+// SHOW SLIDER VALUES
 document.getElementById("gutterRatio").innerHTML = ratioM.value;
 
 ratioM.onchange = function () {
     document.getElementById("gutterRatio").innerHTML = ratioM.value;
 }
-/*
-// Gutter Calculator
+
+// RAINFALL BY CITY
+const outputRainSelect = document.getElementById("outputRainSelect");
+
+rainfall.onchange = function () {
+    outputRainSelect.innerHTML = rainfall.value;
+}
+
+/* <<< THIS IS FOR SOUND CONTROL >>> */
+let soundIcon = document.getElementsByClassName("soundIcon");
+
+soundIcon[0].addEventListener('click', function () {
+    //soundIcon[0].style.backgroundColor = 'red';
+    // soundIcon[0].classList.toggle("soundIconOn");
+    soundIcon[0].toggleClass("soundIconOn").toggleClass("soundIconOff");
+})
+
+
+
+// Gutter Calculation
 // https://www.metalsales.us.com/wp-content/uploads/2020/01/1b-general-information-pm-2018.pdf
-
-
-0.0106 * 0.75 ^ (-.57) * 40 ^ 0.107 * 7200 ^ .357 ==== .0106 * .18 * 1.48 * 23.82 ===== .067 ft//0.8" [should be a bout 0.5] ==== should be 5-6"
-*/
-

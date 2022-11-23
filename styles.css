@@ -99,9 +99,36 @@ header {
     padding: 1rem 3rem;
 }
 
+#navbarGroup {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
 
+
+.soundIconOn {
+    fill: blue;
+}
+
+.soundIconOff {
+    fill: rgb(196, 196, 196);
+}
+
+
+
+.soundIcon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.soundIcon:hover {
+    cursor: crosshair;
+}
 
 .hamburger {
+
     display: block;
     cursor: pointer;
 }
@@ -214,6 +241,10 @@ h1 {
 #submitField {
     align-self: center;
     margin: 10px 0 0 0;
+}
+
+.form-check-input {
+    margin-left: 30px;
 }
 
 
@@ -329,6 +360,19 @@ button:active {
     background-color: bisque;
 }
 
+select {
+    margin-left: 5px;
+}
+
+#outputRainSelect {
+    width: 60px;
+    height: 1.75em;
+    background-color: white;
+    border-radius: 5px;
+    text-align: left;
+    margin-left: 7px;
+}
+
 input {
     border-radius: 5px;
     border: none;
@@ -386,6 +430,11 @@ input {
     display: block;
     border-radius: 50%;
     filter: grayscale(100%);
+}
+
+
+.project:hover {
+    transform: scale(1.1);
 }
 
 .cropped-color {

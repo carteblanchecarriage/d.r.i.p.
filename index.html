@@ -15,56 +15,72 @@
     <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <!--
-        <audio hidden controls autoplay>
-             <source src="rain.mp3">
+
+    <audio hidden>
+        <source src="rain.mp3">
     </audio>
-    -->
+
 </head>
 
 <body id="body1">
     <header>
         <nav class="navbar">
             <a href="index.html" class="nav-logo"><b>d . r . i . p .</b></a>
-            <ul class="nav-menu" class="active" id="nav-menu">
-                <a href="index.html" class="nav-link">
-                    <li class="nav-item">
-                        home
-                    </li>
-                </a>
-                <a href="references.html" class="nav-link">
-                    <li class="nav-item">
-                        reference projects
-                    </li>
-                </a>
-                <a href="rain.html" class="nav-link">
-                    <li class="nav-item">
-                        rain
-                    </li>
-                </a>
-                <a href="howtouse.html" class="nav-link">
-                    <li class="nav-item">
-                        about
-                    </li>
-                </a>
-            </ul>
-            <div class="hamburger" class="active" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div id="navbarGroup">
+                <!--<svg class="soundIcon soundIconOff soundIconOn" xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" viewBox="0 0 16 16">
+                    <path
+                        d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
+                    <path
+                        d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
+                    <path
+                        d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
+                </svg>-->
+
+                <ul class="nav-menu" class="active" id="nav-menu">
+                    <a href="index.html" class="nav-link">
+                        <li class="nav-item">
+                            home
+                        </li>
+                    </a>
+                    <a href="references.html" class="nav-link">
+                        <li class="nav-item">
+                            reference projects
+                        </li>
+                    </a>
+                    <a href="rain.html" class="nav-link">
+                        <li class="nav-item">
+                            rain
+                        </li>
+                    </a>
+                    <a href="howtouse.html" class="nav-link">
+                        <li class="nav-item">
+                            about
+                        </li>
+                    </a>
+                </ul>
+
+                <div class="hamburger" class="active" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </nav>
     </header>
 
     <div id="calcSection">
-        <section>
-            <button id="imperial" class="btn">Imperial</button>
-            <button class="btn" disabled>Metric (coming eventually)</button>
-        </section>
-
-        <img id="axo" src="roof_sketch.png" alt="diagram depicting length and width" width="50%">
-
         <form id="form1" target="_top" method="post" onsubmit="return false">
+            <section>
+                <input type="radio" name="units" id="imperial" class="form-check-input" required>
+                <label class="form-check-label" for="imperial">Imperial</label>
+                <input type="radio" name="units" id="metric" class="form-check-input" required>
+                <label class="form-check-label" for="metric">Metric</label>
+            </section>
+
+            <img id="axo" src="roof_sketch.png" alt="diagram depicting length and width" width="50%">
+
+
             <!-- CAN'T FIGURE OUT HOW TO MAKE IT STOP OPENING A NEW TAB OR REFRESHING :(  -->
             <div id="inputFields">
                 <div class=" field">
@@ -77,8 +93,17 @@
                             placeholder="50" required></label>
                 </div>
                 <div class="field">
-                    <label for="rainfall">Rainfall Intensity (in/hr) <input id="rainfall" type="number" name="rainfall"
-                            placeholder="6" min="0.1" max="15" step="0.01" required></label>
+
+                    <label for="rainfall" class="toolip">Rainfall Intensity (in/hr) </label>
+                    <select id="rainfall">
+                        <option value=<<<<>Choose City</option>
+                        <option value=2.6>Pittsburgh</option>
+                        <option value=2.6>Cleveland</option>
+                        <option value=1.4>Seattle</option>
+                        <option value=4.7>Miami</option>
+                        <option value=2.6>Cleveland</option>
+                    </select>
+                    <span id="outputRainSelect"></span>
                 </div>
                 <div class="field">
                     <label for="gutterLength">Gutter Length (ft) <input id="gutterLength" type="number"
