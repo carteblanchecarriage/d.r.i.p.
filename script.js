@@ -30,8 +30,8 @@ const metric = document.getElementById("metric");
 submitBtn.addEventListener('click', function gutterCalc() {
     const gutterWidth = 12 * 0.0106 * Math.pow(ratioM.value, -(4 / 7)) * Math.pow(gutterLength.value, (3 / 28)) * Math.pow((rainfall.value * (roofWidth.value * roofLength.value)), (5 / 14));
     if (imperial.checked) {
-        outputText1.innerHTML = "Gutter Width: " + Math.ceil(gutterWidth) + '"';
-        outputText2.innerHTML = "Gutter Depth: " + Math.ceil(gutterWidth * ratioM.value) + '"';
+        outputText1.innerHTML = `Gutter Width: ${Math.ceil(gutterWidth)} cm`;
+        outputText2.innerHTML = `Gutter Depth: ${Math.ceil(gutterWidth * ratioM.value)} cm`;
         form1.preventDefault();
     } else if (metric.checked) {
         outputText1.innerHTML = `Gutter Width: ${Math.ceil(gutterWidth * 2.54)} cm`;
