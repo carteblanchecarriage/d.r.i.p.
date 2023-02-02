@@ -9,6 +9,7 @@ hamburger.addEventListener('click', function () {
 });
 
 
+
 /* <<< THIS IS THE GUTTER CALCULATION >>> */
 
 const roofWidth = document.getElementById("roofWidth");
@@ -27,11 +28,12 @@ const gutterWidth = 0.016 * (Math.pow(ratioM.value, (-4 / 7))) * Math.pow(gutter
 const imperial = document.getElementById("imperial");
 const metric = document.getElementById("metric");
 
-submitBtn.addEventListener('click', function gutterCalc() {
+submitBtn.addEventListener('click', function gutterCalc(e) {
+    e.preventDefault()
     const gutterWidth = 12 * 0.0106 * Math.pow(ratioM.value, -(4 / 7)) * Math.pow(gutterLength.value, (3 / 28)) * Math.pow((rainfall.value * (roofWidth.value * roofLength.value)), (5 / 14));
     if (imperial.checked) {
-        outputText1.innerHTML = `Gutter Width: ${Math.ceil(gutterWidth)} cm`;
-        outputText2.innerHTML = `Gutter Depth: ${Math.ceil(gutterWidth * ratioM.value)} cm`;
+        outputText1.innerHTML = `Gutter Width: ${Math.ceil(gutterWidth)} in`;
+        outputText2.innerHTML = `Gutter Depth: ${Math.ceil(gutterWidth * ratioM.value)} in`;
         form1.preventDefault();
     } else if (metric.checked) {
         outputText1.innerHTML = `Gutter Width: ${Math.ceil(gutterWidth * 2.54)} cm`;
@@ -44,6 +46,8 @@ clrBtn.addEventListener('click', function () {
     outputText1.innerHTML = 'Gutter Width: X"';
     outputText2.innerHTML = 'Gutter Depth: X"';
 })
+
+
 
 // SHOW SLIDER VALUES
 document.getElementById("gutterRatio").innerHTML = ratioM.value;
